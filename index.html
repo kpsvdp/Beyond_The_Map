@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Paris &amp; Brussels Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+       <div class="logo">
+  <img src="images/logo.png" alt="Paris & Brussels Logo" />
+  <div class="logo-text">
+    <span class="logo-title">Beyond The Map </span>
+  </div>
+</div>
+      </div>
+
+      <div class="navGroup">
+        <div class="navTitle">Pages</div>
+        <div class="nav">
+          <a class="active" href="index.html">🏠 Dashboard</a>
+          <a href="day1.html">📅 Day 1</a>
+          <a href="day2.html">📅 Day 2</a>
+          <a href="day3.html">📅 Day 3</a>
+          <a href="day4.html">📅 Day 4</a>
+          <a href="finance.html">💷 Finance</a>
+          <button id="themeToggle" type="button">🌙 Theme</button>
+        </div>
+      </div>
+
+      <div class="navGroup">
+        <div class="navTitle">Currency</div>
+        <select id="currencySelect" class="currencySelect" aria-label="Currency">
+          <option value="GBP">🇬🇧 GBP</option>
+          <option value="EUR">🇫🇷 EUR</option>
+          <option value="USD">🇺🇸 USD</option>
+          <option value="INR">🇮🇳 INR</option>
+        </select>
+      </div>
+
+      <div class="navGroup">
+        <div class="navTitle">Quick Jump</div>
+        <div class="nav">
+          <a href="#paris">🗼 Paris Story</a>
+          <a href="#brussels">🇧🇪 Brussels Story</a>
+        </div>
+      </div>
+
+      <div class="navGroup">
+        <div class="navTitle">Images</div>
+        <div class="nav">
+          <a href="#" onclick="alert('Add your photos: create folder /images and change URLs in js/data.js to paths like images/paris/eiffel.jpg'); return false;">📷 How to add images</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <!-- Wallpaper / Hero -->
+      <section class="wallpaper" id="wallpaper">
+        <div class="wallpaper-bg"></div>
+        <div class="wallpaper-overlay"></div>
+        <div class="wallpaper-content">
+          <div class="wallBadge">Paris • Brussels</div>
+          <h2 class="wallTitle">Paris &amp; Brussels Trip Dashboard</h2>
+          <p class="wallSubtitle">14–17 Dec 2025 • Your all-in-one plan, budget, and daily schedule</p>
+          <button id="dayNightToggle" class="dayNightBtn" type="button">🌙 Night View</button>
+        </div>
+      </section>
+
+      <!-- PARIS -->
+      <section class="section" id="paris">
+        <div class="sectionHead">
+          <div>
+            <h3>Paris</h3>
+            <p>Paris is a city where history, art, and everyday life blend effortlessly along timeless streets and the flowing Seine.</p>
+          </div>
+          <a class="pill" href="day1.html">Open Paris days →</a>
+        </div>
+        <div class="sectionBody split">
+          <div class="textBox" id="parisText"></div>
+          <div class="imgGrid">
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Paris01.jpg')"></div>
+              <div class="caption">Eiffel Tower</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Paris02.jpg')"></div>
+              <div class="caption">Louvre Museum</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Paris03.jpg')"></div>
+              <div class="caption">Seine River</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Paris04.jpg')"></div>
+              <div class="caption">Montmartre</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Paris05.webp')"></div>
+              <div class="caption">Palais Garnier</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Paris06.jpg')"></div>
+              <div class="caption">Disneyland</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRUSSELS -->
+      <section class="section" id="brussels">
+        <div class="sectionHead">
+          <div>
+            <h3>Brussels</h3>
+            <p>Where old stone streets, comforting food, and glowing winter Christmas lights come together in quiet magic.</p>
+          </div>
+          <a class="pill" href="day3.html">Open Brussels day →</a>
+        </div>
+        <div class="sectionBody split">
+          <div class="textBox" id="brusselsText"></div>
+          <div class="imgGrid">
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Brussels04.jpg')"></div>
+              <div class="caption">Grand Place</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Brussels01.jpg')"></div>
+              <div class="caption">Atomium</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Brussels03.jpg')"></div>
+              <div class="caption">Christmas Market</div>
+            </div>
+            <div class="imgCard">
+              <div class="img" style="background-image:url('images/Brussels02.jpg')"></div>
+              <div class="caption">Manneken Pis</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">Edit content &amp; images in <b>js/data.js</b></div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/currency.js"></script>
+  <script>window.Currency && window.Currency.bindSelect && window.Currency.bindSelect();</script>
+  <script src="js/app.js"></script>
+  <script src="js/wallpaper.js"></script>
+</body>
+</html>
