@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Finance • Trip Totals</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">PB</div>
+        <div>
+          <h1>Trip Dashboard</h1>
+          <p>Finance</p>
+        </div>
+      </div>
+      <div class="navGroup">
+        <div class="navTitle">Pages</div>
+        <div class="nav">
+          <a href="index.html">🏠 Dashboard</a>
+          <a href="day1.html">📅 Day 1</a>
+          <a href="day2.html">📅 Day 2</a>
+          <a href="day3.html">📅 Day 3</a>
+          <a href="day4.html">📅 Day 4</a>
+          <a class="active" href="finance.html">💷 Finance</a>
+          <button id="themeToggle" type="button">🌙 Theme</button>
+          <button onclick="window.print()">🖨️ Print</button>
+        </div>
+      </div>
+
+      <div class="navGroup">
+        <div class="navTitle">Currency</div>
+        <select id="currencySelect" class="currencySelect" aria-label="Currency">
+          <option value="GBP">🇬🇧 GBP</option>
+          <option value="EUR">🇫🇷 EUR</option>
+          <option value="USD">🇺🇸 USD</option>
+          <option value="INR">🇮🇳 INR</option>
+        </select>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="section">
+        <div class="sectionHead">
+          <div>
+            <h3>Totals</h3>
+            <p>Bookings + Paris pools</p>
+          </div>
+        </div>
+        <div class="sectionBody">
+          <div class="kpis">
+            <div class="kpi">
+              <div class="kpiLabel">Grand Total</div>
+              <div class="kpiValue" id="grandTotal">—</div>
+            </div>
+            <div class="kpi">
+              <div class="kpiLabel">Bookings & Tickets</div>
+              <div class="kpiValue" id="fixedTotal">—</div>
+            </div>
+            <div class="kpi">
+              <div class="kpiLabel">Paris Pools Total</div>
+              <div class="kpiValue" id="poolsTotal">—</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="tableWrap" id="dayTotals"></div>
+      <div class="tableWrap" id="priceList"></div>
+
+      <div class="footer">Edit amounts in <b>js/data.js</b></div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/currency.js"></script>
+  <script>window.Currency && window.Currency.bindSelect && window.Currency.bindSelect();</script>
+  <script src="js/finance.js"></script>
+</body>
+</html>
