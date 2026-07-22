@@ -1225,3 +1225,16 @@ body.light .logout-journey-card{border-color:rgba(14,116,144,.22)}
 .countries-page [hidden]{display:none!important}
 .country-search button{flex:0 0 28px;width:28px;height:28px;padding:0;border:0;border-radius:8px;background:rgba(148,163,184,.12);color:var(--muted);font:700 18px/1 Inter,sans-serif;cursor:pointer}
 .country-search button:hover,.country-search button:focus-visible{background:rgba(50,214,233,.18);color:var(--accent);outline:2px solid rgba(50,214,233,.28);outline-offset:1px}
+
+/* GitHub Pages login layout fix: override the shared centred auth-card layout. */
+body.auth-body.auth-login-modern{
+  display:block;
+  place-items:normal;
+  width:100%;
+  max-width:none;
+}
+.auth-login-modern .login-command-shell{
+  width:100%;
+  max-width:none;
+  margin:0;
+}
