@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete category and day-by-day budget for a six-day Türkiye trip from London.">
+  <title>6-Day Türkiye Trip Budget | Beyond The Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body class="turkey-page">
+  <div class="world-bg" aria-hidden="true"><div class="grid-glow"></div><div class="route-line r1"></div><div class="route-line r2"></div><div class="plane plane1">✈</div><div class="plane plane2">🚌</div><div class="traveller">🧍‍♂️</div><span class="pin india">🇹🇷 Istanbul</span><span class="pin uk">🇬🇧 London</span><span class="pin europe">🇹🇷 Antalya</span></div>
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">🌍</span><div><strong>Beyond The Map</strong><small>India → UK → Europe</small></div></div>
+    <nav aria-label="Primary navigation">
+      <a href="../dashboard.html">🏠 Dashboard</a><a href="../countries.html">🗺️ Countries</a><a href="../budget.html">💷 Budget</a><a href="../visa.html">🛂 Visa Guides</a><a href="../blog.html">✍️ Blogger</a><a href="../media.html">📸 Photos &amp; Videos</a><a href="../account.html">👤 Account</a><a href="../logout.html">🚪 Logout</a>
+    </nav>
+    <button class="mode-toggle" id="modeToggle" type="button">☀️ / 🌙</button>
+  </aside>
+
+  <main class="main turkey-main">
+    <header class="turkey-hero budget-hero glass">
+      <div class="turkey-hero-copy">
+        <span class="eyebrow">🇹🇷 Six-day trip budget</span>
+        <h1>A realistic planning total, not a fake low number</h1>
+        <p class="hero-route">One traveller · Five nights · Economy flights · Cabin baggage</p>
+        <div class="trip-pills"><span>Subtotal <b data-money="1440" data-subtotal>£1,440</b></span><span>Contingency <b data-money="145" data-contingency>£145</b></span><span>All-attraction ceiling <b data-money="1724" data-all-attraction-total>£1,724</b></span></div>
+        <div class="turkey-actions"><a class="secondary-link" href="../countries/turkey.html">View itinerary</a><a class="secondary-link" href="../visa/turkey.html">Visa guide</a></div>
+      </div>
+      <div class="trip-total-card">
+        <span>Estimated trip total</span><strong data-money="1585" data-trip-total>£1,585</strong><small>Visa, insurance and checked baggage are not included.</small>
+        <label for="globalCurrency">Display currency</label>
+        <select id="globalCurrency" class="select"><option>GBP</option><option>INR</option><option>USD</option><option>EUR</option><option>CHF</option><option>TRY</option><option>PLN</option><option>CZK</option><option>HUF</option><option>SEK</option></select>
+      </div>
+    </header>
+
+    <section class="turkey-section">
+      <div class="section-heading"><div><span class="eyebrow">Category totals</span><h2>Where the money goes</h2></div><p>All figures are planning allowances dated 18 July 2026.</p></div>
+      <div class="category-budget-grid">
+        <article class="glass"><span>✈️</span><small>Flights</small><strong data-money="266">£266</strong><p>London-Istanbul, Istanbul-Cappadocia and Antalya-London</p></article>
+        <article class="glass"><span>🚌</span><small>Intercity buses</small><strong data-money="38">£38</strong><p>Göreme-Antalya and Antalya-Pamukkale return</p></article>
+        <article class="glass"><span>🛏️</span><small>Rooms</small><strong data-money="560">£560</strong><p>Five nights across three bases</p></article>
+        <article class="glass"><span>🎟️</span><small>Activities</small><strong data-money="316">£316</strong><p>Includes the balloon and scheduled entries</p></article>
+        <article class="glass"><span>🍽️</span><small>Your food budget</small><strong data-money="180" data-food-total>£180</strong><p>Average <span data-money="30" data-food-average>£30</span> per day</p></article>
+        <article class="glass"><span>🚕</span><small>Local transport</small><strong data-money="80">£80</strong><p>Airport shuttles, city trips and stations</p></article>
+      </div>
+    </section>
+
+    <section class="turkey-section food-budget-builder glass">
+      <div class="food-builder-head">
+        <div><span class="eyebrow">🍽️ Add your own price</span><h2>Choose your daily food spending</h2><p>Enter each day's food allowance in GBP. The category total, daily totals, contingency and full trip total will recalculate.</p></div>
+        <button type="button" class="secondary-link" data-food-reset>Reset to £30 per day</button>
+      </div>
+      <div class="food-price-grid">
+        <label><span><b>Day 1 · Istanbul</b><small>Simit, lentil soup, baklava and tea</small></span><span class="food-input"><i>£</i><input type="number" min="0" step="1" value="30" data-food-input="0" aria-label="Day 1 Istanbul food price in pounds"></span></label>
+        <label><span><b>Day 2 · Cappadocia</b><small>Chicken-and-vegetable testi kebabı</small></span><span class="food-input"><i>£</i><input type="number" min="0" step="1" value="30" data-food-input="1" aria-label="Day 2 Cappadocia food price in pounds"></span></label>
+        <label><span><b>Day 3 · Cappadocia</b><small>Breakfast, vegetarian lunch and mantı</small></span><span class="food-input"><i>£</i><input type="number" min="0" step="1" value="30" data-food-input="2" aria-label="Day 3 Cappadocia food price in pounds"></span></label>
+        <label><span><b>Day 4 · Antalya</b><small>Travel snacks, piyaz and grilled vegetables</small></span><span class="food-input"><i>£</i><input type="number" min="0" step="1" value="30" data-food-input="3" aria-label="Day 4 Antalya food price in pounds"></span></label>
+        <label><span><b>Day 5 · Pamukkale</b><small>Cheese-spinach gözleme, ayran and dinner</small></span><span class="food-input"><i>£</i><input type="number" min="0" step="1" value="30" data-food-input="4" aria-label="Day 5 Pamukkale food price in pounds"></span></label>
+        <label><span><b>Day 6 · Antalya</b><small>Cheese-spinach pide, tea and airport food</small></span><span class="food-input"><i>£</i><input type="number" min="0" step="1" value="30" data-food-input="5" aria-label="Day 6 Antalya food price in pounds"></span></label>
+      </div>
+      <div class="food-budget-results" aria-live="polite">
+        <div><span>Your food total</span><strong data-money="180" data-food-total>£180</strong></div>
+        <div><span>Revised subtotal</span><strong data-money="1440" data-subtotal>£1,440</strong></div>
+        <div><span>Contingency</span><strong data-money="145" data-contingency>£145</strong></div>
+        <div class="food-grand-total"><span>Revised trip total</span><strong data-money="1585" data-trip-total>£1,585</strong></div>
+      </div>
+      <p class="food-save-status" data-food-status>Saved automatically and used on both Turkey Details and Budget pages.</p>
+    </section>
+
+    <section class="turkey-section">
+      <div class="section-heading"><div><span class="eyebrow">Day-wise cost</span><h2>Six days before contingency</h2></div><p>These six values add up to <strong data-money="1440" data-subtotal>£1,440</strong>.</p></div>
+      <div class="daily-budget-grid">
+        <article class="glass"><div><span>Day 1</span><h3>Istanbul</h3></div><strong data-money="340" data-food-day-total="0">£340</strong><ul><li>London flight <b data-money="120">£120</b></li><li>Room <b data-money="120">£120</b></li><li>Activities <b data-money="40">£40</b></li><li>Food + local travel <b data-money="60" data-food-component="0" data-food-component-base="30">£60</b></li></ul></article>
+        <article class="glass"><div><span>Day 2</span><h3>To Cappadocia</h3></div><strong data-money="284" data-food-day-total="1">£284</strong><ul><li>Flight <b data-money="54">£54</b></li><li>Room <b data-money="130">£130</b></li><li>Museum + ATV <b data-money="45">£45</b></li><li>Food + shuttle <b data-money="55" data-food-component="1" data-food-component-base="25">£55</b></li></ul></article>
+        <article class="glass"><div><span>Day 3</span><h3>Cappadocia</h3></div><strong data-money="345" data-food-day-total="2">£345</strong><ul><li>Room <b data-money="130">£130</b></li><li>Balloon <b data-money="150">£150</b></li><li>Red Tour <b data-money="35">£35</b></li><li>Food <b data-money="30" data-food-component="2" data-food-component-base="0">£30</b></li></ul></article>
+        <article class="glass"><div><span>Day 4</span><h3>To Antalya</h3></div><strong data-money="148" data-food-day-total="3">£148</strong><ul><li>Coach <b data-money="18">£18</b></li><li>Room <b data-money="90">£90</b></li><li>Food <b data-money="30" data-food-component="3" data-food-component-base="0">£30</b></li><li>Local travel <b data-money="10">£10</b></li></ul></article>
+        <article class="glass"><div><span>Day 5</span><h3>Pamukkale</h3></div><strong data-money="181" data-food-day-total="4">£181</strong><ul><li>Return coaches <b data-money="20">£20</b></li><li>Room <b data-money="90">£90</b></li><li>Activities <b data-money="36">£36</b></li><li>Food + local travel <b data-money="35" data-food-component="4" data-food-component-base="5">£35</b></li></ul></article>
+        <article class="glass"><div><span>Day 6</span><h3>To London</h3></div><strong data-money="142" data-food-day-total="5">£142</strong><ul><li>Flight <b data-money="92">£92</b></li><li>Activities <b data-money="10">£10</b></li><li>Food <b data-money="30" data-food-component="5" data-food-component-base="0">£30</b></li><li>Airport travel <b data-money="10">£10</b></li></ul></article>
+      </div>
+    </section>
+
+    <section class="budget-table-section turkey-section glass">
+      <div class="section-heading"><div><span class="eyebrow">Full calculation</span><h2>Budget summary</h2></div></div>
+      <div class="budget-line"><span>Flights</span><p>London-Istanbul <b data-money="120">£120</b>; Istanbul-Cappadocia <b data-money="54">£54</b>; Antalya-London <b data-money="92">£92</b></p><strong data-money="266">£266</strong></div>
+      <div class="budget-line"><span>Buses</span><p>Göreme-Antalya <b data-money="18">£18</b>; Pamukkale return <b data-money="20">£20</b></p><strong data-money="38">£38</strong></div>
+      <div class="budget-line"><span>Rooms</span><p>Istanbul <b data-money="120">£120</b>; Cappadocia <b data-money="260">£260</b>; Antalya <b data-money="180">£180</b></p><strong data-money="560">£560</strong></div>
+      <div class="budget-line"><span>Activities</span><p>Istanbul <b data-money="40">£40</b>; Cappadocia <b data-money="230">£230</b>; Pamukkale/Antalya <b data-money="46">£46</b></p><strong data-money="316">£316</strong></div>
+      <div class="budget-line"><span>Food</span><p>Six-day custom total; average <b data-money="30" data-food-average>£30</b> per day</p><strong data-money="180" data-food-total>£180</strong></div>
+      <div class="budget-line"><span>Local transport</span><p>Airport shuttles, city transport and station connections</p><strong data-money="80">£80</strong></div>
+      <div class="budget-line total-line"><span>Subtotal</span><p>Before contingency</p><strong data-money="1440" data-subtotal>£1,440</strong></div>
+      <div class="budget-line"><span>Contingency</span><p>About 10%, rounded up to the next £5</p><strong data-money="145" data-contingency>£145</strong></div>
+      <div class="budget-line grand-line"><span>Trip total</span><p>One traveller, five nights and cabin baggage</p><strong data-money="1585" data-trip-total>£1,585</strong></div>
+    </section>
+
+    <section class="turkey-section two-column-notes">
+      <article class="glass warning-panel"><span class="eyebrow">Not included</span><h2>Keep extra money for these</h2><ul class="check-list cross-list"><li>Türkiye visa fee</li><li>Travel insurance and emergency medical costs</li><li>UK airport transport</li><li>Checked baggage and seat selection</li><li>Shopping, alcohol and personal spending</li></ul><p>Checked baggage across all three flights could add roughly <span data-money="60">£60</span>-<span data-money="150">£150</span>, depending on airline and booking stage.</p></article>
+      <article class="glass savings-panel"><span class="eyebrow">Lower-budget choices</span><h2>What actually cuts the cost</h2><div class="saving-row"><div><b>Skip the balloon</b><p>Keep the valley views and tours.</p></div><strong>-<span data-money="150">£150</span></strong></div><div class="saving-row"><div><b>Use an overnight coach</b><p>Remove Cappadocia night 2, but accept a harder journey.</p></div><strong>-<span data-money="130">£130</span></strong></div><p class="saving-total">Doing both reduces the estimate to about <b data-money="1305" data-low-total>£1,305</b>.</p></article>
+    </section>
+
+    <section class="turkey-section glass budget-notes">
+      <span class="eyebrow">Reality check</span><h2>Important fare assumptions</h2>
+      <div class="note-grid"><p><b>No travel dates:</b> airfares and rooms may move sharply by season.</p><p><b>No UK airport chosen:</b> London connections and airport transport are not included.</p><p><b>Every attraction:</b> the paid-attraction list totals <span data-money="443">£443</span>, but it does not fit sensibly into six days.</p><p><b>All-attraction ceiling:</b> the revised trip total is about <span data-money="1724" data-all-attraction-total>£1,724</span> with contingency.</p></div>
+      <div class="booking-links compact-links"><a href="https://www.google.com/travel/flights" target="_blank" rel="noopener">Google Flights ↗</a><a href="https://www.skyscanner.net/" target="_blank" rel="noopener">Skyscanner ↗</a><a href="https://www.turkishairlines.com/" target="_blank" rel="noopener">Turkish Airlines ↗</a><a href="https://www.flypgs.com/en" target="_blank" rel="noopener">Pegasus ↗</a><a href="https://www.obilet.com/en" target="_blank" rel="noopener">Obilet ↗</a><a href="https://global.flixbus.com/" target="_blank" rel="noopener">FlixBus ↗</a></div>
+    </section>
+  </main>
+  <script src="../assets/js/main.js"></script><script src="../assets/js/chatbot.js"></script><script src="../assets/js/currency.js"></script><script src="../assets/js/turkey-food-budget.js"></script>
+</body>
+</html>
