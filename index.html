@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In | Beyond The Map</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/responsive.css">
+</head><body class="auth-body auth-login-modern">
+<main class="login-command-shell">
+  <section class="login-control-panel" aria-labelledby="loginTitle">
+    <div class="login-brand"><span class="login-brand-mark">✈</span><span><strong>Beyond The Map</strong><small>Personal travel command centre</small></span></div>
+    <div class="login-panel-content">
+      <span class="eyebrow"><i></i> Global Journey System Online</span>
+      <h1 id="loginTitle"><a class="welcome-globe" href="dashboard.html" aria-label="Open dashboard" title="Open dashboard">🌍</a> Welcome back</h1>
+      <p class="login-intro">Continue planning your journeys, budgets, visas and travel memories.</p>
+      <form id="loginForm">
+        <label>Traveller username or email<input name="identity" type="text" autocomplete="username" placeholder="Enter username or email" required></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required></label>
+        <button class="primary" type="submit">Sign In <span aria-hidden="true">→</span></button>
+        <p class="auth-status" id="authStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="auth-links"><a href="register.html">Create Account</a><a href="forgot-username.html">Forgot Traveller Username?</a></div>
+    </div>
+    <p class="login-footer">Private journey workspace · GBP (£)</p>
+  </section>
+  <aside class="login-journey-copy" aria-label="Journey overview">
+    <span>Adventure starts here</span>
+    <h2>See the world.<br>Plan every detail.</h2>
+    <p>India → United Kingdom → Europe</p>
+  </aside>
+  <div class="login-stat"><strong>31</strong><span>Country guides</span></div>
+</main>
+<script src="assets/js/main.js"></script><script src="assets/js/auth.js"></script>
+</body></html>

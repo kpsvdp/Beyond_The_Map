@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Journey Command Centre | Beyond The Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="impact-dashboard-body">
+<div class="impact-bg" aria-hidden="true">
+  <div class="impact-stars"></div>
+  <div class="impact-grid"></div>
+  <div class="impact-aurora aurora-a"></div>
+  <div class="impact-aurora aurora-b"></div>
+  <div class="impact-sweep"></div>
+</div>
+
+<aside class="sidebar impact-sidebar">
+  <div class="brand impact-brand"><span class="logo">🌍</span><div><strong>Beyond The Map</strong><small>AI route command</small></div></div>
+  <nav>
+    <a class="active" href="dashboard.html">🏠 Dashboard</a>
+    <a href="countries.html">🌐 Countries</a>
+    <a href="budget.html">💷 Budget</a>
+    <a href="visa.html">🛂 Schengen Visa</a>
+    <a href="media.html">🖼️ Photos & Videos</a>
+    <a href="blog.html">📝 Blogger</a>
+    <a href="account.html">👤 Account</a>
+    <a href="logout.html">🚪 Logout</a>
+  </nav>
+  <div class="sidebar-profile">
+    <span>🇮🇳</span><div><b>Indian traveller</b><small>Based in 🇬🇧 UK</small></div>
+  </div>
+  <button class="mode-toggle" id="modeToggle">☀️ / 🌙 Mode</button>
+</aside>
+
+<main class="impact-main">
+  <section class="impact-hero">
+    <div class="hero-copy">
+      <span class="live-pill"><i></i> AI journey system online</span>
+      <h1>GLOBAL JOURNEY COMMAND CENTRE</h1>
+      <p>Travel control room with complete Western, Central, Southern and Nordic itineraries, detailed budgets, official planning links and the correct main-destination Schengen visa route for each journey.</p>
+    </div>
+    <div class="hero-actions">
+      <label class="currency-pill">Currency
+        <select id="globalCurrency" class="select impact-select">
+          <option>GBP</option><option>INR</option><option>USD</option><option>EUR</option><option>CHF</option><option>TRY</option><option>PLN</option><option>CZK</option><option>HUF</option><option>SEK</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <section class="impact-stats" aria-label="Travel profile and budget overview">
+    <article><small>Passport</small><b>🇮🇳 India</b><span>Applicant profile</span></article>
+    <article><small>Base</small><b>🇬🇧 United Kingdom</b><span>Travel starting hub</span></article>
+    <article><small>Countries visited</small><b>14</b><span>Türkiye + 13 European countries</span></article>
+    <article><small>Countries planning</small><b>17</b><span>future three-day country trips</span></article>
+    <article class="budget-stat"><small>Visited trip budget</small><b><span data-money="7523">£7,523</span>–<span data-money="9360">£9,360</span></b><span>Türkiye + three Europe journeys</span></article>
+    <article class="budget-stat future-budget-stat"><small>Future budget estimate</small><b><span data-money="8060">£8,060</span>–<span data-money="14895">£14,895</span></b><span>17 separate trips · visa costs extra</span></article>
+    <article class="budget-stat total-budget-stat"><small>Total travel budget</small><b><span data-money="15583">£15,583</span>–<span data-money="24255">£24,255</span></b><span>visited journeys + all future plans</span></article>
+  </section>
+
+  <section class="impact-layout">
+    <div class="impact-map-panel">
+      <div class="panel-top">
+        <div>
+          <span class="eyebrow">Direction map</span>
+          <h2>Live route network</h2>
+        </div>
+        <div class="map-panel-controls">
+          <div class="route-toggle" id="routeToggle" aria-label="Choose a route">
+            <button class="active" data-route="all" aria-pressed="true">All</button>
+            <button data-route="turkey" aria-pressed="false">Turkey</button>
+            <button data-route="west" aria-pressed="false">West</button>
+            <button data-route="central" aria-pressed="false">Central</button>
+            <button data-route="south" aria-pressed="false">South + Nordic</button>
+          </div>
+          <button class="map-lock-btn" id="mapLockBtn" type="button" aria-pressed="true" title="Unlock the map to drag and zoom">🔒 Map locked</button>
+        </div>
+      </div>
+      <div class="map-stage">
+        <div class="map-hud top-left" id="routeMapStatus" role="status" aria-live="polite">MAP LOCKED · ALL ROUTES</div>
+        <div class="map-hud bottom-right">✈ Flight · 🚆 Rail · 🧍 Traveller</div>
+        <div id="routeMap" class="route-map impact-route-map" aria-label="Modern AI route map"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact-actions">
+    <a href="countries.html"><span>🌐</span><b>Countries</b><small>Places, rooms, flights and activities</small></a>
+    <a href="budget.html"><span>💷</span><b>Budget</b><small>Working currency switcher</small></a>
+    <a href="visa.html"><span>🛂</span><b>Schengen Visa</b><small>Documents, proof and checklist</small></a>
+    <a href="media.html"><span>📸</span><b>Media</b><small>Photos and video slots</small></a>
+  </section>
+
+  <section class="dashboard-europe-trip western-dashboard-trip" aria-labelledby="westernTripTitle">
+    <div class="dashboard-trip-head">
+      <div>
+        <span class="eyebrow">Featured journey · 6 days / 5 nights</span>
+        <h2 id="westernTripTitle">🇫🇷 Paris · 🇧🇪 Brussels · 🇳🇱 Amsterdam</h2>
+        <p>Newcastle → Paris → Brussels → Paris → Amsterdam → Newcastle</p>
+      </div>
+      <div class="dashboard-trip-total">
+        <small>All-in planning range</small>
+        <strong><span data-money="1440">£1,440</span>–<span data-money="2080">£2,080</span></strong>
+      </div>
+    </div>
+    <div class="dashboard-trip-links">
+      <a href="europe-trip.html"><span>🗺️</span><div><b>Trip Details</b><small>Full itinerary, rooms, transport, food and activities</small></div><i>Open →</i></a>
+      <a href="budget/europe-trip.html"><span>💷</span><div><b>Complete Budget</b><small>Day costs, country segments and all-in total</small></div><i>Open →</i></a>
+      <a href="visa/france.html"><span>🛂</span><div><b>Schengen Visa</b><small>France-led application, documents and templates</small></div><i>Open →</i></a>
+    </div>
+  </section>
+  <section class="dashboard-europe-trip central-dashboard-trip" aria-labelledby="centralTripTitle">
+    <div class="dashboard-trip-head"><div><span class="eyebrow">🚆 Central Europe · 13 days / 12 nights</span><h2 id="centralTripTitle">🇵🇱 Poland · 🇨🇿 Czechia · 🇦🇹 Austria · 🇸🇰 Slovakia · 🇭🇺 Hungary · 🇸🇮 Slovenia</h2><p>Newcastle → Krakow → Zakopane → Prague → Vienna → Bratislava → Budapest → Ljubljana → Budapest → Newcastle</p></div><div class="dashboard-trip-total"><small>All-in planning range</small><strong><span data-money="1523">£1,523</span>-<span data-money="1970">£1,970</span></strong></div></div>
+    <div class="dashboard-trip-links"><a href="central-europe-trip.html"><span>🗺️</span><div><b>Trip Details</b><small>13-day itinerary, rooms, transport, food and activities</small></div><i>Open →</i></a><a href="budget/central-europe-trip.html"><span>💷</span><div><b>Complete Budget</b><small>Country allocations and all-in total</small></div><i>Open →</i></a><a href="visa/central-europe.html"><span>🛂</span><div><b>Schengen Visa</b><small>Likely Hungary-led application and master checklist</small></div><i>Open →</i></a></div>
+  </section>
+  <section class="dashboard-europe-trip south-dashboard-trip" aria-labelledby="southTripTitle">
+    <div class="dashboard-trip-head">
+      <div><span class="eyebrow">✈ Four countries · 14 days / 13 nights</span><h2 id="southTripTitle">🇮🇹 Italy · 🇨🇭 Switzerland · 🇪🇸 Spain · 🇸🇪 Sweden</h2><p>Newcastle → Milan → Interlaken → Zurich → Milan → Pisa → Rome → Barcelona → Palma → Stockholm → Krakow → Newcastle</p></div>
+      <div class="dashboard-trip-total"><small>Realistic all-in target</small><strong><span data-money="2975">£2,975</span>–<span data-money="3725">£3,725</span></strong></div>
+    </div>
+    <div class="dashboard-trip-links"><a href="italy-switzerland-spain-sweden-trip.html"><span>🗺️</span><div><b>Trip Details</b><small>14-day itinerary, rooms, trains, ferry, flights and activities</small></div><i>Open →</i></a><a href="budget/italy-switzerland-spain-sweden-trip.html"><span>💷</span><div><b>Complete Budget</b><small>Recorded costs, missing costs and country allocations</small></div><i>Open →</i></a><a href="visa/italy-switzerland-spain-sweden.html"><span>🛂</span><div><b>Schengen Visa</b><small>Italy-led application, checklist and letter templates</small></div><i>Open →</i></a></div>
+  </section>
+<!-- FUTURE_TRIPS_START -->
+<section class="dashboard-europe-trip future-dashboard-trip" aria-labelledby="futureTripsTitle"><div class="dashboard-trip-head"><div><h2 id="futureTripsTitle">These countries</h2><p>🇵🇹 Portugal · 🇮🇸 Iceland · 🇩🇰 Denmark · 🇳🇴 Norway · 🇫🇮 Finland · 🇷🇴 Romania · 🇬🇷 Greece · 🇭🇷 Croatia · 🇷🇸 Serbia · 🇦🇱 Albania · 🇲🇩 Moldova · 🇱🇹 Lithuania · 🇬🇱 Greenland · 🇮🇪 Ireland · 🇩🇿 Algeria · 🇲🇦 Morocco · Western Sahara</p></div><div class="dashboard-trip-total"><small>17 separate base trips</small><strong><span data-money="8060">£8,060</span>–<span data-money="14895">£14,895</span></strong><span>Visa costs separate</span></div></div><div class="notice-strip danger"><strong>Reality check</strong><p>Greenland and Western Sahara are poor three-day choices from London because connections consume most of Day 1 and Day 3.</p></div><div class="dashboard-trip-links"><a href="future-3-day-trips.html"><span>🗺️</span><div><b>Trip Details</b><small>Day plans, flights, rooms, local transport, food and activities</small></div><i>Open →</i></a><a href="budget/future-3-day-trips.html"><span>💷</span><div><b>Country Budgets</b><small>17 complete three-day planning ranges</small></div><i>Open →</i></a><a href="visa/future-3-day-trips.html"><span>🛂</span><div><b>Visa Dashboard</b><small>Schengen, conditional and separate visa routes</small></div><i>Open →</i></a></div></section>
+<!-- FUTURE_TRIPS_END -->
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chatbot.js"></script>
+<script src="assets/js/currency.js"></script>
+<script src="assets/js/route-map.js"></script>
+</body>
+</html>

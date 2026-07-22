@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | Beyond The Map</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/responsive.css">
+</head><body class="auth-body">
+<div class="world-bg"><div class="grid-glow"></div><div class="plane plane1">✈</div><div class="traveller">🧍‍♂️</div><span class="pin india">🇮🇳 India</span><span class="pin uk">🇬🇧 UK</span><span class="pin europe">🇪🇺 Europe</span></div>
+<section class="auth-card auth-card-wide">
+  <span class="eyebrow">Traveller registration</span>
+  <h1>🌍 Create your account</h1>
+  <p>Set up your Global Journey Command Centre profile.</p>
+  <form id="registerForm">
+    <div class="auth-form-grid">
+      <label>First name *<input name="firstName" type="text" value="Pavan" autocomplete="given-name" required></label>
+      <label>Middle name<input name="middleName" type="text" autocomplete="additional-name"></label>
+      <label>Surname *<input name="surname" type="text" autocomplete="family-name" required></label>
+      <label>Email *<input name="email" type="email" autocomplete="email" required></label>
+      <label>Traveller username *<input name="username" type="text" minlength="3" pattern="[A-Za-z0-9._-]+" autocomplete="username" placeholder="pavan.travels" required></label>
+      <label>Password *<input name="password" type="password" minlength="8" autocomplete="new-password" required></label>
+      <label>Who you are *<select name="accountType" class="select" required><option>Global Explorer</option><option>Solo Traveller</option><option>Travel Blogger</option><option>Trip Planner</option></select></label>
+      <label>Gender *<select name="gender" class="select" required><option value="">Select gender</option><option>Male</option><option>Female</option><option>Non-binary</option><option>Prefer not to say</option></select></label>
+      <label>Date of birth *<input name="dateOfBirth" type="date" autocomplete="bday" required></label>
+      <label>Nationality *<input name="nationality" type="text" value="Indian" required></label>
+      <label>Current location *<input name="location" type="text" value="United Kingdom" required></label>
+      <label>Preferred currency *<select name="currency" class="select" required><option>GBP (£)</option><option>INR (₹)</option><option>EUR (€)</option><option>USD ($)</option></select></label>
+    </div>
+    <label class="auth-consent"><input name="terms" type="checkbox" required> I confirm these account details are correct.</label>
+    <button class="primary" type="submit">Create Account</button>
+    <p class="auth-status" id="authStatus" role="status" aria-live="polite"></p>
+  </form>
+  <div class="auth-links"><a href="index.html">Already registered? Sign in</a><a href="forgot-username.html">Forgot Traveller Username?</a></div>
+</section>
+<script src="assets/js/main.js"></script><script src="assets/js/auth.js"></script>
+</body></html>
