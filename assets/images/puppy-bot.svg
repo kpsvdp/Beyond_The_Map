@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Cartoon puppy waving hi">
+  <defs>
+    <radialGradient id="bg" cx="45%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#fff8d5"/>
+      <stop offset="1" stop-color="#f7b267"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#22d3ee" flood-opacity=".45"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <style>
+    .tail{transform-origin:164px 128px;animation:wag .58s ease-in-out infinite alternate}.earL{transform-origin:72px 78px;animation:ear 2.2s ease-in-out infinite}.earR{transform-origin:148px 78px;animation:ear2 2.6s ease-in-out infinite}.paw{transform-origin:63px 138px;animation:wave .9s ease-in-out infinite alternate}.eye{transform-origin:center;animation:blink 3.1s infinite}.mouth{transform-origin:110px 128px;animation:talk 1.1s ease-in-out infinite}.bubble{animation:pop 1.4s ease-in-out infinite alternate}.shine{animation:float 2.8s ease-in-out infinite alternate}@keyframes wag{from{transform:rotate(-14deg)}to{transform:rotate(17deg)}}@keyframes wave{from{transform:rotate(-9deg) translateY(0)}to{transform:rotate(16deg) translateY(-4px)}}@keyframes ear{50%{transform:rotate(-5deg)}}@keyframes ear2{50%{transform:rotate(5deg)}}@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.08)}}@keyframes talk{0%,100%{transform:scaleY(.45)}50%{transform:scaleY(1)}}@keyframes pop{from{transform:translateY(0) scale(.95);opacity:.82}to{transform:translateY(-4px) scale(1);opacity:1}}@keyframes float{from{opacity:.45}to{opacity:1}}
+  </style>
+  <circle cx="110" cy="110" r="96" fill="url(#bg)" filter="url(#glow)"/>
+  <circle class="shine" cx="58" cy="51" r="10" fill="#fff" opacity=".65"/>
+  <path class="tail" d="M158 132c26-18 36-8 30 6-5 12-22 11-35 1" fill="none" stroke="#8b4b22" stroke-width="16" stroke-linecap="round"/>
+  <ellipse cx="110" cy="132" rx="61" ry="54" fill="#d18445"/>
+  <ellipse class="earL" cx="72" cy="86" rx="23" ry="42" fill="#8b4b22" transform="rotate(-28 72 86)"/>
+  <ellipse class="earR" cx="148" cy="86" rx="23" ry="42" fill="#8b4b22" transform="rotate(28 148 86)"/>
+  <circle cx="110" cy="105" r="55" fill="#f5b16b"/>
+  <path d="M72 88c18-35 58-39 76 0-21-11-55-11-76 0z" fill="#ffe2a8" opacity=".75"/>
+  <ellipse cx="88" cy="109" rx="10" ry="12" fill="#152238" class="eye"/>
+  <ellipse cx="132" cy="109" rx="10" ry="12" fill="#152238" class="eye"/>
+  <circle cx="91" cy="105" r="3" fill="#fff"/>
+  <circle cx="135" cy="105" r="3" fill="#fff"/>
+  <ellipse cx="110" cy="123" rx="12" ry="9" fill="#402315"/>
+  <path d="M98 133c7 8 17 8 24 0" fill="none" stroke="#402315" stroke-width="5" stroke-linecap="round"/>
+  <ellipse class="mouth" cx="110" cy="140" rx="10" ry="7" fill="#ef6b6b"/>
+  <ellipse class="paw" cx="65" cy="145" rx="16" ry="25" fill="#f4a85f" transform="rotate(-28 65 145)"/>
+  <ellipse cx="153" cy="150" rx="16" ry="22" fill="#f4a85f"/>
+  <g class="bubble">
+    <rect x="128" y="36" width="55" height="31" rx="15" fill="#ecfeff" opacity=".96"/>
+    <path d="M139 64l-10 10 3-14" fill="#ecfeff" opacity=".96"/>
+    <text x="155" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#0f172a">Hi!</text>
+  </g>
+</svg>
